@@ -224,6 +224,8 @@ local function LoadCfg(Config)
 			end)
 		else
 			warn("Orion配置加载程序-寻找不到", a ,b)
+			wait(1)
+			warn("我靠你怎么删了")
 		end
 	end)
 end
@@ -239,7 +241,7 @@ local function SaveCfg(Name)
 			end
 		end	
 	end
-	writefile(OrionLib.Folder .. "/" .. Name .. ".txt", tostring(HttpService:JSONEncode(Data)))
+	writefile(OrionLib.Folder .. "/" .. Name .. ".Lua", tostring(HttpService:JSONEncode(Data)))
 end
 
 local WhitelistedMouse = {Enum.UserInputType.MouseButton1, Enum.UserInputType.MouseButton2,Enum.UserInputType.MouseButton3}
@@ -800,7 +802,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				end
 				return LabelFunction
 			end
-			function ElementFunction:Paragraph(Text, Content)
+			function ElementFunction:Paragraph(Text,Content)
 				Text = Text or "Text"
 				Content = Content or "Content"
 
