@@ -4,4 +4,5 @@ return {
   BigFov = "玩家广角",
   Noclip = "反外挂穿墙",
   Fly = "反外挂飞行",
+  Bypass = "自研绕反挂"
 }
